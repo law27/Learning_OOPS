@@ -88,12 +88,13 @@ class SimpledotCom
     {
         int guess = Integer.parseInt(userGuess);
         String result = "miss";
-        for(int i : locationCells)
+        for(int i = 0 ; i < locationCells.length ; i++)
         {
-            if( guess == i)
+            if( guess == locationCells[i])
             {
                 result = "hit" ;
                 ++hitCount     ;
+                locationCells[i] = -1 ;
 
             }
             if( hitCount == locationCells.length)
